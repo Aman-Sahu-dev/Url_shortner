@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimalist, high-performance URL shortener for developers.">
+    <title>Shorty // Dev URL Shortener</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header><h1>Shorty<span style="color:var(--glow)">.</span></h1></header>
+        <main>
+            <div class="box">
+                <div class="input-group">
+                    <input id="u" type="url" placeholder="https://very-long-url.com/..." autofocus>
+                    <button onclick="s()">Shorten Now</button>
+                </div>
+                <div id="res">Short URL: <br><a id="l" target="_blank"></a></div>
+            </div>
+            <div class="box" style="padding: 0; overflow: hidden;">
+                <table>
+                    <thead><tr><th>Original URL</th><th>Short Code</th><th>Clicks</th></tr></thead>
+                    <tbody id="t"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
